@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Medicina Estética</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Century:estilos" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="branding">
+            <img src="assets/inheader_web.png" alt="Bellus Medical Arts Aesthetics & Wellness">
+        </div>
+        <nav>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="treatments.html">TREATMENTS</a></li>
+                <li><a href="appointments.html">APPOINTMENTS</a></li>
+                <li><a href="aboutUs.html">ABOUT US</a></li>
+                <li><a href="faqs.html">FAQs</a></li> <!-- Nuevo enlace añadido -->
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        // Selecciona el botón de menú hamburguesa y escucha el evento de clic
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            // Alterna la clase 'nav-active' en el elemento body
+            document.body.classList.toggle('nav-active');
+        });
+    </script>
+    
+    <main>
+        <section class="about-us-section">
+            <div class="container">
+                <div class="section-content">
+                    <h1 class="section-title">Our Story</h1>
+                    <p class="section-description">"Beauty and Beyond: Our journey started with a vision to revolutionize the aesthetic medicine industry. From our first clinic, we've grown into a haven for beauty and wellness, blending art and science to enhance natural beauty. Our path has been marked by innovation, driven by the desire to offer not just treatments, but transformations that uplift and inspire confidence in everyone who walks through our doors."</p>
+                </div>
+                
+                <div class="section-content">
+                    <h1 class="section-title">Our Mission</h1>
+                    <p class="section-description">"Redefining Beauty Standards: Our mission is to redefine beauty standards, providing state-of-the-art aesthetic treatments that empower our clients to feel their best. We strive to create a world where beauty is a source of confidence, not anxiety, offering personalized care that respects the individuality and needs of each client. Join us in a journey of self-discovery and enhancement, where your beauty dreams become reality."</p>
+                </div>
+                
+                <div class="section-content">
+                    <h1 class="section-title">Our Values</h1>
+                    <ul class="section-description">
+                        <li><strong>Compassion:</strong> At the heart of our practice lies compassion. We understand the personal nature of aesthetic choices and provide a supportive, judgment-free environment. Your comfort and satisfaction are our highest priority, guiding us in every interaction and treatment.</li>
+                        <li><strong>Expertise:</strong> Our team's expertise is the cornerstone of our success. We're committed to continuous education and staying at the forefront of aesthetic medicine, ensuring you receive the most effective and innovative treatments available.</li>
+                        <li><strong>Integrity:</strong> Integrity is paramount in our operations. We believe in honest assessments and transparent communication, ensuring you have all the information needed to make informed decisions about your treatment options.</li>
+                        <li><strong>Excellence:</strong> Excellence is our signature. From the moment you enter our clinic to the final results of your treatment, we're dedicated to providing an unparalleled level of care and quality, exceeding your expectations at every turn.</li>
+                        <li><strong>Innovation:</strong> Our passion for innovation drives us to explore the latest technologies and treatments in aesthetic medicine. We're dedicated to bringing you cutting-edge solutions that offer better results, minimal downtime, and enhanced safety.</li>
+                    </ul>
+                </div>
+                
+                
+                <div class="contact-section">
+                    <h2>Contact Us</h2>
+                    <p class="section-description">Follow our best professional for the latest updates:</p>
+                    <div class="social-links">
+                    <!-- Facebook Link -->
+                        <a href="https://www.facebook.com/drbeauvoirclinics" target="_blank">
+                        <img src="assets/fb.png" alt="Facebook">
+                        </a>
+                    <!-- Instagram Link -->
+                        <a href="https://www.instagram.com/drbeauvoirdallas" target="_blank">
+                        <img src="assets/ig.png" alt="Instagram">
+                        </a>
+                    </div>
+                </div>
+                <!-- Add more sections or team member details as needed -->
+                
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        
+        <img src="assets/footer_logo.png" alt="Bellus Logo" class="footer-logo">
+            
+        <div class="newsletter-signup">
+            <h1>SIGN UP TO OUR NEWSLETTER</h1>
+            <form id="newsletterForm" action="https://script.google.com/macros/s/AKfycbw6Dj-lUPDnedX7dnKkTWJtMGzYU3m-OgIqqSARdak3-C0rx3LG1BGNeZaIn4rwn6w/exec" method="POST">
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <input type="email" id="email" name="email" placeholder="E-Mail" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+        
+        <div class="footer-column">
+            <p>Bellus Medical Arts|Aesthetic and Wellness</p>
+            <p>Marie Beauvoir, MD</p>
+            <p>Board Certified, Family Medicine</p>
+            <p>Medical Director - Owner</p>
+        </div>
+        <div class="footer-column">
+            <p>1241 Prosper Commons Blvd, Suite 108</p>
+            <p>Prosper, TX 75078</p>
+            <p>&copy; 2024, BellusMedicalArts</p>
+            <p>Powered by Luca Sicoli and Alexis Flores.</p>
+        </div>       
+
+    </footer>
+
+    <script src="footerform.js"></script>
+
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navUl = document.querySelector('nav ul');
+
+            navToggle.addEventListener('click', function () {
+                navUl.classList.toggle('active');
+                this.classList.toggle('active');
+            });
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Medicina Estética</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Century:estilos" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="branding">
+         <img src="assets/inheader_web.png" alt="Bellus Medical Arts Aesthetics & Wellness">
+        </div>
+
+        <nav>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="treatments.html">TREATMENTS</a></li>
+                <li><a href="appointments.html">APPOINTMENTS</a></li>
+                <li><a href="aboutUs.html">ABOUT US</a></li>
+                <li><a href="faqs.html">FAQs</a></li> <!-- Nuevo enlace añadido -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section class="treatments-section">
+            <div class="treatment-titles">
+                <a href="#body-treatments"><img src="assets/services_body_button.png" alt="body services"></a>
+                <a href="#face-treatments"><img src="assets/services_face_button.png" alt="face services"></a>
+                <a href="#more-treatments"><img src="assets/services_more_button.png" alt="more services"></a>
+            </div>
+        </section>
+
+
+        <section class="treatments-asociation" id="body-treatments">
+            <h1><span class="hover-underline-animation">BODY TREATMENTS</span></h1>
+        </section>        
+
+  
+        <section class="treatments-section">
+
+            <div class="treatments-container">
+                <!-- Tratamiento 1 -->
+
+                <div class="treatment-card" onclick="expandCard(this)">
+                    <img src="assets/celullite_icon.png" alt="CELLULITE REDUCTION" class="treatment-image">
+                    <div class="treatment-content">
+                      <h2 class="treatment-title">Cellulite reduction with Aveli</h2>
+                      <div class="treatment-details">
+                        <p class="treatment-description">Aveli is a minimally invasive technique for cellulite reduction that targets the structural cause by cutting the fibrous bands pulling down the skin. This results in smoother skin by reducing the puckered appearance on thighs, buttocks, and other areas, creating a more even and pleasing surface.</p>
+                        <p class="treatment-price">Price: $199.99</p>
+                        <div class="treatment-expanded-buttons">
+                        <a href="appointments.html" class="treatment-appointment">SCHEDULE AN APPOINTMENT</a>
+                        <a href="faqs.html" class="treatment-faqs">ANY MORE QUESTIONS?</a>
+                        </div>
+                      </div>
+                      <div class="close-btn" onclick="closeCard(event)">&times;</div>
+                    </div>
+                  </div>    
+
+                  <div id="overlay" onclick="closeCard(event)"></div>
+                
+                <!-- Tratamiento 2 -->
+
+                <div class="treatment-card" onclick="expandCard(this)">
+                    <img src="assets/penis_icon.png" alt="PENNIS ENLARGEMENT" class="treatment-image">
+                    <div class="treatment-content">
+                      <h2 class="treatment-title">Penis enlargement <br>with hyaluronic dermal filler</h2>
+                      <div class="treatment-details">
+                        <p class="treatment-description">Penis enlargement with Upsize's hyaluronic dermal filler offers a non-surgical girth enhancement, injecting natural substances for volume increase and improved sexual pleasure, aiming for natural results and a minimally invasive experience.</p>
+                        <p class="treatment-price">Price: $3500 Small 10 ml  above 0.5 inch in girth,<br>$5200 Medium 16ml<br>$7200 Extra Large 24 ml<br>$9600 Best 2XL 32 ml</p>
+                        <div class="treatment-expanded-buttons">
+                        <a href="appointments.html" class="treatment-appointment">SCHEDULE AN APPOINTMENT</a>
+                        <a href="faqs.html" class="treatment-faqs">ANY MORE QUESTIONS?</a>
+                        </div>
+                      </div>
+                      <div class="close-btn" onclick="closeCard(event)">&times;</div>
+                    </div>
+                </div>    
+
+                <div id="overlay" onclick="closeCard(event)"></div>
+
+                
+
+                <div class="treatment-card" onclick="expandCard(this)">
+                    <img src="assets/co2 laser_icon.png" alt="C02 LASER RESURFACING" class="treatment-image">
+                    <div class="treatment-content">
+                      <h2 class="treatment-title">CO2 Laser therapy for facial and vaginal rejuvenation</h2>
+                      <div class="treatment-details">
+                        <p class="treatment-description">CO2 laser therapy rejuvenates skin and vaginal areas, reducing wrinkles, scars, and hyperpigmentation while enhancing collagen and elastin production for smoother, firmer skin. In vaginal rejuvenation, it improves tissue tone, moisture, and comfort, offering minimal downtime and boosting function and self-confidence, especially post-aging or childbirth.</p>
+                        <p class="treatment-price">Price: $699 - $1200 single session per area / packages available <br> Recovey: 7 days</p>
+                        <div class="treatment-expanded-buttons">
+                        <a href="appointments.html" class="treatment-appointment">SCHEDULE AN APPOINTMENT</a>
+                        <a href="faqs.html" class="treatment-faqs">ANY MORE QUESTIONS?</a>
+                        </div>
+                      </div>
+                      <div class="close-btn" onclick="closeCard(event)">&times;</div>
+                    </div>
+                </div>    
+
+                <div id="overlay" onclick="closeCard(event)"></div>
+
+                <div class="treatment-card" onclick="expandCard(this)">
+                    <img src="assets/bbl_icon.png" alt="BRAZILIAN BUTT LIFT" class="treatment-image">
+                    <div class="treatment-content">
+                      <h2 class="treatment-title">Non-surgical Brazilian Butt Lifts</h2>
+                      <div class="treatment-details">
+                        <p class="treatment-description">Non-surgical Brazilian Butt Lifts use plant-based hyaluronic acid fillers for buttocks and hips enhancement, allowing precise contouring, immediate lift, and minimal downtime, creating a fuller, desired S-curve silhouette.</p>
+                        <p class="treatment-price">Price: $1500-$1900 per every 100 ML <br> Recovery: 1 Day</p>
+                        <div class="treatment-expanded-buttons">
+                        <a href="appointments.html" class="treatment-appointment">SCHEDULE AN APPOINTMENT</a>
+                        <a href="faqs.html" class="treatment-faqs">ANY MORE QUESTIONS?</a>
+                        </div>
+                      </div>
+                      <div class="close-btn" onclick="closeCard(event)">&times;</div>
+                    </div>
+                </div>    
+
+                <div id="overlay" onclick="closeCard(event)"></div>
+
+                <div class="treatment-card" onclick="expandCard(this)">
+                    <img src="assets/2hair_icon.png" alt="HAIR TRANSPLANTATION" id="hair-trans" class="treatment-image">
+                    <div class="treatment-content">
+                      <h2 class="treatment-title">Hair transplantation</h2>
+                      <div class="treatment-details">
+                        <p class="treatment-description">Hair transplantation is a surgical procedure that moves hair follicles from a part of the body, known as the 'donor site', to a bald or balding part of the body known as the 'recipient site'. It is primarily used to treat male pattern baldness. The technique is highly advanced and involves transplanting individual hair follicles for a natural-looking appearance. Follicular Unit Extraction (FUE) or Follicular Unit Transplantation (FUT) are two common methods used, where the former involves harvesting individual hair...</p>
+                        <p class="treatment-price">Price: $500 single session / $1800 - 4 sessions / $250 single add on after complete use of a purchased package <br>Recovery: Same Day</p>
+                        <div class="treatment-expanded-buttons">
+                        <a href="appointments.html" class="treatment-appointment">SCHEDULE AN APPOINTMENT</a>
+                        <a href="faqs.html" class="treatment-faqs">ANY MORE QUESTIONS?</a>
+                        </div>
+                      </div>
+                      <div class="close-btn" onclick="closeCard(event)">&times;</div>
+                    </div>
+                </div>    
+
+                <div id="overlay" onclick="closeCard(event)"></div>
+
+                <div class="treatment-card" onclick="expandCard(this)">
+                    <img src="assets/iridology_icon.png" alt="IRIDOLOGY" class="treatment-image">
+                    <div class="treatment-content">
+                      <h2 class="treatment-title">Iridology with full body detoxification</h2>
+                      <div class="treatment-details">
+                        <p class="treatment-description">Iridology is an alternative medicine technique that involves analyzing the patterns, colors, and other characteristics of the iris to assess an individual's systemic health. Proponents believe that specific zones of the iris correlate with internal organs and body systems, and observing these can help reveal areas of inflammation or imbalance.</p>
+                        <p class="treatment-price">Price: $199.99</p>
+                        <div class="treatment-expanded-buttons">
+                        <a href="appointments.html" class="treatment-appointment">SCHEDULE AN APPOINTMENT</a>
+                        <a href="faqs.html" class="treatment-faqs">ANY MORE QUESTIONS?</a>
+                        </div>
+                      </div>
+                      <div class="close-btn" onclick="closeCard(event)">&times;</div>
+                    </div>
+                </div>    
+
+                <div id="overlay" onclick="closeCard(event)"></div>
+
+            </div>
+
+        </section>
+
+        <section class="treatments-asociation" id="face-treatments">
+            <h1><span class="hover-underline-animation">FACE TREATMENTS</span></h1>
+        </section> 
+
+        <button id="btnVolverArriba" style="display: none;" onclick="volverAlInicio()">
+          <span style="font-weight: bold;">↑</span>
+        </button>
+
+        <section class="treatments-section">
+            <div class="treatments-container">
+
+
+                <div class="treatment-card" onclick="expandCard(this)">
+                <img src="assets/cheeks_icon.png" alt="CHEEKS" class="treatment-image">
+                    <div class="treatment-content">
+                      <h2 class="treatment-title">Cheeks Augmentation</h2>
+                      <div class="treatment-details">
+                        <p class="treatment-description">Cheek fillers enhance facial structure by adding volume or defining cheekbones for a slimmer appearance. Administered by skilled practitioners, these fillers provide balanced, natural enhancements that rejuvenate and harmonize facial features for a youthful look. Temporary side effects like redness or swelling are possible. Consultations are available to explore this and other aesthetic services for a tailored and satisfying result.</p>
+                        <p class="treatment-price">Price: $199.99</p>
+                        <div class="treatment-expanded-buttons">
+                        <a href="appointments.html" class="treatment-appointment">SCHEDULE AN APPOINTMENT</a>
+                        <a href="faqs.html" class="treatment-faqs">ANY MORE QUESTIONS?</a>
+                        </div>
+                      </div>
+                      <div class="close-btn" onclick="closeCard(event)">&times;</div>
+                    </div>
+                </div>    
+
+                <div id="overlay" onclick="closeCard(event)"></div>
+
+                <div class="treatment-card" onclick="expandCard(this)">
+                    <img src="assets/chin aumegtation_icon.png" alt="CHIN" class="treatment-image">
+                    <div class="treatment-content">
+                      <h2 class="treatment-title">Chin Augmentation</h2>
+                      <div class="treatment-details">
+                        <p class="treatment-description">Chin enhancement with dermal fillers is a non-surgical, cost-effective method that improves facial harmony by adjusting the chin's length or width. It adds volume for immediate facial balance, with possible redness or swelling post-treatment. Our aim is a natural look that enhances confidence. Contact us for a consultation.</p>
+                        <p class="treatment-price">Price: $499 syringe (Usually 2-6 treatments) <br> Recovery: up to 7 days</p>
+                        <div class="treatment-expanded-buttons">
+                        <a href="appointments.html" class="treatment-appointment">SCHEDULE AN APPOINTMENT</a>
+                        <a href="faqs.html" class="treatment-faqs">ANY MORE QUESTIONS?</a>
+                        </div>
+                      </div>
+                      <div class="close-btn" onclick="closeCard(event)">&times;</div>
+                    </div>
+                </div>    
+
+                <div id="overlay" onclick="closeCard(event)"></div>
+
+                <div class="treatment-card" onclick="expandCard(this)">
+                    <img src="assets/hydro-facial glow_icon.png" alt="HIDRO FACIAL GLOW" class="treatment-image">
+                    <div class="treatment-content">
+                      <h2 class="treatment-title">Hydro-facial Glow</h2>
+                      <div class="treatment-details">
+                        <p class="treatment-description">The Hydro-facial Glow, a premier skincare treatment, deeply cleanses and exfoliates to remove impurities and dead skin, revealing a brighter complexion. It hydrates with serums, promoting skin health and a vibrant glow. Regular sessions combat aging signs, maintaining youthful skin. Ideal for proactive skincare enthusiasts seeking lasting radiance and health.</p>
+                        <p class="treatment-price">Price: $150-$300 <br>Recovery: Same Day</p>
+                        <div class="treatment-expanded-buttons">
+                        <a href="appointments.html" class="treatment-appointment">SCHEDULE AN APPOINTMENT</a>
+                        <a href="faqs.html" class="treatment-faqs">ANY MORE QUESTIONS?</a>
+                        </div>
+                      </div>
+                      <div class="close-btn" onclick="closeCard(event)">&times;</div>
+                    </div>
+                </div>    
+
+                <div id="overlay" onclick="closeCard(event)"></div>
+
+                <div class="treatment-card" onclick="expandCard(this)">
+                    <img src="assets/lips_icon.png" alt="LIPS FILLER" class="treatment-image">
+                    <div class="treatment-content">
+                      <h2 class="treatment-title">Lip Augmentation</h2>
+                      <div class="treatment-details">
+                        <p class="treatment-description">Lip enhancement with dermal fillers, using hyaluronic acid, increases volume and defines contours for a youthful appearance. It addresses natural thinning by replenishing HA, with options tailored to individual needs. Temporary post-treatment redness or swelling may occur. Our clinic offers personalized care and welcomes inquiries about cosmetic options.</p>
+                        <p class="treatment-price">Price: Lips $499 up to one ML syringe</p>
+                        <div class="treatment-expanded-buttons">
+                        <a href="appointments.html" class="treatment-appointment">SCHEDULE AN APPOINTMENT</a>
+                        <a href="faqs.html" class="treatment-faqs">ANY MORE QUESTIONS?</a>
+                        </div>
+                        </div>
+                        <div class="close-btn" onclick="closeCard(event)">&times;</div>
+                    </div>
+                </div>    
+
+                <div id="overlay" onclick="closeCard(event)"></div>
+
+                <div class="treatment-card" onclick="expandCard(this)">
+                    <img src="assets/marionette lines_icon.png" alt="MARIONETTE LINES" class="treatment-image">
+                    <div class="treatment-content">
+                      <h2 class="treatment-title">Marionette Lines</h2>
+                      <div class="treatment-details">
+                        <p class="treatment-description">Dermal fillers target marionette lines, restoring volume and stimulating collagen for a rejuvenated appearance. Precision injections reduce these lines, optionally combined with Botox for better results. Temporary redness, swelling, or bruising may follow. Our clinic provides personalized treatments based on individual facial structures and goals, ensuring natural outcomes. For more on marionette line treatments or other services, contact us for a detailed consultation.</p>
+                        <p class="treatment-price">Price: $199.99</p>
+                        <div class="treatment-expanded-buttons">
+                        <a href="appointments.html" class="treatment-appointment">SCHEDULE AN APPOINTMENT</a>
+                        <a href="faqs.html" class="treatment-faqs">ANY MORE QUESTIONS?</a>
+                        </div>
+                      </div>
+                      <div class="close-btn" onclick="closeCard(event)">&times;</div>
+                    </div>
+                </div>    
+
+                <div id="overlay" onclick="closeCard(event)"></div>
+
+                <div class="treatment-card" onclick="expandCard(this)">
+                    <img src="assets/microneedle renewal_icon.png" alt="MICRONEEDLE RENEWAL" class="treatment-image">
+                    <div class="treatment-content">
+                      <h2 class="treatment-title">Microneedle Renewal</h2>
+                      <div class="treatment-details">
+                        <p class="treatment-description">Microneedle Renewal combines microneedling with radiofrequency for improved skin rejuvenation, enhancing collagen and elastin production, smoothing fine lines, and tightening skin. This non-surgical procedure suits various skin types with minimal downtime, making it perfect for active lifestyles. It significantly enhances skin texture and tone for a youthful, natural look. For refreshed, rejuvenated skin, book your session with us.</p>
+                        <p class="treatment-price">Price: $300 per session, Package of 3 sessions 4 weeks apart for $750 <br> Recovery: Up to 3 days</p>
+                        <div class="treatment-expanded-buttons">
+                        <a href="appointments.html" class="treatment-appointment">SCHEDULE AN APPOINTMENT</a>
+                        <a href="faqs.html" class="treatment-faqs">ANY MORE QUESTIONS?</a>
+                        </div>
+                      </div>
+                      <div class="close-btn" onclick="closeCard(event)">&times;</div>
+                    </div>
+                </div>    
+
+                <div id="overlay" onclick="closeCard(event)"></div>
+
+                <div class="treatment-card" onclick="expandCard(this)">
+                    <img src="assets/nonsurgical-facelift_icon.png" alt="FACELIFT" class="treatment-image">
+                    <div class="treatment-content">
+                      <h2 class="treatment-title">Non-surgical facelift with PDO threads</h2>
+                      <div class="treatment-details">
+                        <p class="treatment-description">A PDO thread lift rejuvenates the skin by lifting and tightening with biodegradable threads, promoting collagen production for a firmer complexion. It's a minimally invasive, dual-action treatment offering immediate lifting and long-term rejuvenation with minimal downtime. Ideal for combating aging signs like sagging skin without surgery, it results in a natural-looking lift, enhancing facial harmony. Contact us for more information.</p>
+                        <p class="treatment-price">Price: $300 -per thread (for example midface lift is usually 4-6 threads total) <br> Recovery: Up to 5 days</p>
+                        <div class="treatment-expanded-buttons">
+                        <a href="appointments.html" class="treatment-appointment">SCHEDULE AN APPOINTMENT</a>
+                        <a href="faqs.html" class="treatment-faqs">ANY MORE QUESTIONS?</a>
+                        </div>
+                      </div>
+                      <div class="close-btn" onclick="closeCard(event)">&times;</div>
+                    </div>
+                </div>    
+
+                <div id="overlay" onclick="closeCard(event)"></div>
+
+                <div class="treatment-card" onclick="expandCard(this)">
+                    <img src="assets/co2 laser_icon.png" alt="C02 LASER RESURFACING" class="treatment-image">
+                    <div class="treatment-content">
+                      <h2 class="treatment-title">CO2 Laser therapy for facial and vaginal rejuvenation</h2>
+                      <div class="treatment-details">
+                        <p class="treatment-description">CO2 laser therapy rejuvenates skin and vaginal areas, reducing wrinkles, scars, and hyperpigmentation while enhancing collagen and elastin production for smoother, firmer skin. In vaginal rejuvenation, it improves tissue tone, moisture, and comfort, offering minimal downtime and boosting function and self-confidence, especially post-aging or childbirth.</p>
+                        <p class="treatment-price">Price: $699 - $1200 single session per area / packages available <br> Recovey: 7 days</p>
+                        <div class="treatment-expanded-buttons">
+                        <a href="appointments.html" class="treatment-appointment">SCHEDULE AN APPOINTMENT</a>
+                        <a href="faqs.html" class="treatment-faqs">ANY MORE QUESTIONS?</a>
+                        </div>
+                      </div>
+                      <div class="close-btn" onclick="closeCard(event)">&times;</div>
+                    </div>
+                </div>    
+
+                <div id="overlay" onclick="closeCard(event)"></div>
+                  
+
+                
+            </div>
+        </section>
+
+
+
+        <section class="treatments-asociation" id="more-treatments">
+            <h1><span class="hover-underline-animation">MORE TREATMENTS</span></h1>
+        </section>
+
+        <section class="treatments-section">
+
+            <div class="treatments-container">
+
+                <div class="treatment-card" onclick="expandCard(this)">
+                    <img src="assets/fatloss_icon.png" alt="FATLOSS" class="treatment-image">
+                    <div class="treatment-content">
+                      <h2 class="treatment-title">Non-Surgical Fat Loss</h2>
+                      <div class="treatment-details">
+                        <p class="treatment-description">Non-surgical fat loss solutions offer a range of treatments like laser lipo, liquid lipo, and deoxycholic acid fat dissolution. These methods target stubborn fat through minimally invasive techniques, promoting fat reduction without the need for surgery. They're designed for contouring specific areas, providing a more toned appearance and aiding in overall weight loss efforts with minimal downtime.</p>
+                        <p class="treatment-price">Price: $499 syringe (Usually 2-6 treatments)</p>
+                        <div class="treatment-expanded-buttons">
+                        <a href="appointments.html" class="treatment-appointment">SCHEDULE AN APPOINTMENT</a>
+                        <a href="faqs.html" class="treatment-faqs">ANY MORE QUESTIONS?</a>
+                        </div>
+                      </div>
+                      <div class="close-btn" onclick="closeCard(event)">&times;</div>
+                    </div>
+                </div>    
+
+                <div id="overlay" onclick="closeCard(event)"></div>
+
+                <div class="treatment-card" onclick="expandCard(this)">
+                    <img src="assets/neurotoxin_icon.png" alt="NEUROTOXIN" class="treatment-image">
+                    <div class="treatment-content">
+                      <h2 class="treatment-title">Neurotoxin Treatments</h2>
+                      <div class="treatment-details">
+                        <p class="treatment-description">Neurotoxin treatments, commonly known as Botox, offer a versatile solution for both aesthetic and health concerns. By relaxing targeted muscles, they smooth facial wrinkles, alleviate bodily muscle tension, and significantly reduce migraine symptoms. Safe and minimally invasive, these treatments are a preferred choice for enhancing well-being and appearance.</p>
+                        <p class="treatment-price">Price: Above nose frown line, crows feet (around the eyes) and forehead $450 for up to 50 units <br> Additional units - $9/unit </p>
+                        <div class="treatment-expanded-buttons">
+                        <a href="appointments.html" class="treatment-appointment">SCHEDULE AN APPOINTMENT</a>
+                        <a href="faqs.html" class="treatment-faqs">ANY MORE QUESTIONS?</a>
+                        </div>
+                      </div>
+                      <div class="close-btn" onclick="closeCard(event)">&times;</div>
+                    </div>
+                </div>    
+
+                <div id="overlay" onclick="closeCard(event)"></div>
+
+                <div class="treatment-card" onclick="expandCard(this)">
+                    <img src="assets/physical exams_icon.png" alt="PHYSICAL EXAMS" class="treatment-image">
+                    <div class="treatment-content">
+                      <h2 class="treatment-title">Comprehensive Physical Exams</h2>
+                      <div class="treatment-details">
+                        <p class="treatment-description">Physical exams provide a complete health evaluation through a detailed physical examination, extensive blood tests, EKG, hearing and color vision assessments, and a step test, ensuring a comprehensive overview of an individual's health and wellness.</p>
+                        <p class="treatment-price">Price: $199.99</p>
+                        <div class="treatment-expanded-buttons">
+                        <a href="appointments.html" class="treatment-appointment">SCHEDULE AN APPOINTMENT</a>
+                        <a href="faqs.html" class="treatment-faqs">ANY MORE QUESTIONS?</a>
+                        </div>
+                      </div>
+                      <div class="close-btn" onclick="closeCard(event)">&times;</div>
+                    </div>
+                </div>    
+
+                <div id="overlay" onclick="closeCard(event)"></div>
+
+                <div class="treatment-card" onclick="expandCard(this)">
+                    <img src="assets/hair laser removal_icon.png" alt="LASER REMOVAL" class="treatment-image">
+                    <div class="treatment-content">
+                      <h2 class="treatment-title">Laser Hair Removal</h2>
+                      <div class="treatment-details">
+                        <p class="treatment-description">Our laser hair removal service provides a long-term solution to unwanted hair with precision and care, offering a smooth, hair-free appearance.</p>
+                        <p class="treatment-price">Price: Full Body w/o Anal Laser Hair Removal: $3600 Six Sessions <br>Full Body w/Anal Laser Hair Removal: $3900 Six Sessions</p>
+                        <div class="treatment-expanded-buttons">
+                        <a href="appointments.html" class="treatment-appointment">SCHEDULE AN APPOINTMENT</a>
+                        <a href="faqs.html" class="treatment-faqs">ANY MORE QUESTIONS?</a>
+                        </div>
+                      </div>
+                      <div class="close-btn" onclick="closeCard(event)">&times;</div>
+                    </div>
+                </div>    
+
+                <div id="overlay" onclick="closeCard(event)"></div>
+
+            </div>
+
+        </section>
+
+        <section class="treatments-asociation">
+            <a href="appointments.html"><h1><span class="hover-underline-animation">Make your appointment for further details</span></h1></a>
+        </section>
+    
+    </main>
+    
+
+    <footer>
+        
+      <img src="assets/footer_logo.png" alt="Bellus Logo" class="footer-logo">
+          
+      <div class="newsletter-signup">
+        <h1>SIGN UP TO OUR NEWSLETTER</h1>
+        <form id="newsletterForm" action="https://script.google.com/macros/s/AKfycbw6Dj-lUPDnedX7dnKkTWJtMGzYU3m-OgIqqSARdak3-C0rx3LG1BGNeZaIn4rwn6w/exec" method="POST">
+            <input type="text" id="name" name="name" placeholder="Name" required>
+            <input type="email" id="email" name="email" placeholder="E-Mail" required>
+            <button type="submit">Sign Up</button>
+        </form>
+      </div>
+      
+      <div class="footer-column">
+          <p>Bellus Medical Arts|Aesthetic and Wellness</p>
+          <p>Marie Beauvoir, MD</p>
+          <p>Board Certified, Family Medicine</p>
+          <p>Medical Director - Owner</p>
+      </div>
+      <div class="footer-column">
+          <p>1241 Prosper Commons Blvd, Suite 108</p>
+          <p>Prosper, TX 75078</p>
+          <p>&copy; 2024, BellusMedicalArts</p>
+          <p>Powered by Luca Sicoli and Alexis Flores.</p>
+      </div>       
+
+    </footer>
+
+    <script src="expanded.js"></script>
+    <script src="superpowers.js"></script>
+    <script src="botonflotante.js"></script>
+    <script src="footerform.js"></script>
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navUl = document.querySelector('nav ul');
+
+            navToggle.addEventListener('click', function () {
+                navUl.classList.toggle('active');
+                this.classList.toggle('active');
+            });
+        });
+    </script>
+    
+</body>
+</html>

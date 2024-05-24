@@ -1,0 +1,1591 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+body, html {
+    height: 100%; /* Esto permite que el footer se posicione en la parte inferior */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-bottom: 100px;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    background-color: black;
+    line-height: 1.6;
+    margin-bottom: 150px;
+}
+
+
+/* --------------------------------------------------------------------------------------------------
+----------------------------------------------HEADER-----------------------------------------------
+-------------------------------------------------------------------------------------------*/
+
+header {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #d0b456;
+    position: relative;
+}
+
+.branding img {
+    max-width: 100%; /* Asegúrate de que la imagen sea responsive y se ajuste al contenedor */
+    height: 11rem; /* Mantiene la proporción de la imagen */
+}
+
+
+.branding h1 {
+    font-family: 'Playfair Display', serif;
+    color: gold;
+}
+
+.branding p {
+    color: #ddd;
+    
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+.source-serif  {
+    font-family: "Source Serif 4", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+  }
+
+nav ul li a {
+    color: white;
+    font-size: medium;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 4px;
+    transition: color 1s;
+    font-family: "century";
+    margin-right: 11px;
+    margin-left: 11px;
+}
+
+nav ul li:not(:last-child)::after {
+    content: "|";
+    color: #d0b456; /* Cambia esto por el código de color dorado exacto que estás utilizando */
+    padding: 0 10px; /* Ajusta el espaciado a tu gusto */
+}
+
+/* Para evitar que la barra aparezca en el último elemento */
+nav ul li:last-child::after {
+    content: "";
+    padding: 0;
+}
+
+
+nav ul li a:hover, nav ul li a.active {
+    color: gold;
+}
+
+.nav-toggle {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    display: block;
+    background-color: white;
+    height: 2px;
+    width: 25px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    transition: transform 0.3s ease;
+}
+
+.hamburger::before { top: -8px; }
+.hamburger::after { top: 8px; }
+
+.nav-toggle.active .hamburger::before {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.nav-toggle.active .hamburger::after {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav-toggle.active .hamburger {
+    background: transparent;
+}
+
+
+
+/* ----------------------------------------------------------------------------------------
+--------------------------------MAIN SECCION 1----------------------------------------------------------
+-----------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------*/
+
+
+main {
+    min-height: calc(100% - 150px); /* Ajusta 150px al tamaño de tu footer */
+    /* Resto de tu CSS para main */
+}
+
+.homeTreatments {
+    display: block;
+    justify-content: center; /* Esto centrará la imagen horizontalmente */
+    align-items: center; /* Esto centrará la imagen verticalmente si el contenedor tiene una altura específica */
+    margin-top: 2rem;
+
+}
+
+.homeTreatments img {
+    width: 75%; /* Ajusta al ancho que prefieras */
+    height: auto;
+    display: block; /* Asegura que cada imagen tome su propia línea */
+    margin: auto; /* Centra las imágenes horizontalmente y añade espacio arriba y abajo */
+}
+
+/* Específicamente oculta la imagen móvil en vistas de escritorio */
+.homeTreatments .home_treatments-phone {
+    display: none;
+}
+
+.appointment-link {
+    display: block; /* O 'inline-block' si prefieres que el enlace sea del tamaño de la imagen */
+    text-align: center; /* Si el bloque es más grande que la imagen, esto la centra */
+    margin: 20px 0; /* Ajusta el margen alrededor del enlace según sea necesario */
+}
+
+.appointment-link img {
+    width: 50%; /* Mantén el tamaño original de la imagen o ajusta según sea necesario */
+    height: auto;
+    transition: transform 0.3s ease; /* Opcional: animación para cuando se pase el ratón por encima */
+}
+
+.appointment-link:hover img {
+    transform: scale(1.05); /* Opcional: efecto de zoom al pasar el ratón por encima */
+} 
+
+/*---------------------------------------------------------------------------------------------------
+----------------------------------------MAIN SECCION 2 HOME ----------------------------------------
+-------------------------------------------------------------------------------------------------*/
+
+#floating-images {
+    width: 100%; /* Ocupa el ancho completo de la sección */
+    text-align: center; /* Centra las imágenes horizontalmente */
+    padding: 50px 0; /* Agrega algo de espacio arriba y abajo de las imágenes */
+    margin-bottom: -30px;
+}
+
+.floating-img-container {
+    opacity: 0; /* Comienza con las imágenes ocultas */
+    transition: opacity 1.5s ease-in-out; /* Transición suave para el efecto de aparición */
+    position: relative;
+
+}
+
+.floating-img-container2{
+    position: relative;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out; /* Transición suave para el efecto de aparición */
+    display: grid;
+    grid-template-columns: 40% 60%;
+    margin-bottom: 10px;
+    margin-left: 5%;
+}
+
+.floating-img-container3{
+    position: relative;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out; /* Transición suave para el efecto de aparición */
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin-left: -20px;
+}
+
+
+
+.floating-img-container.visible {
+    opacity: 1; /* Las imágenes serán completamente visibles cuando tengan esta clase */
+}
+
+.floating-img-container2.visible{
+    opacity: 1;
+}
+
+.floating-img-container3.visible{
+    opacity: 1;
+}
+
+
+.floating-img-desk {
+    width: 100%; /* Ajusta esto según cómo quieres que se vean las imágenes */
+    height: auto;
+    /* Añade cualquier otro estilo que necesites para las imágenes */
+}
+
+.floating-img-desk2 {
+    width: 100%; /* Ajusta esto según cómo quieres que se vean las imágenes */
+    height: auto;
+    /* Añade cualquier otro estilo que necesites para las imágenes */
+}
+
+.video{
+    width: 100%;
+    height: 95%;
+    border-radius: 10px;
+   
+}
+
+.video2{
+    width: 100%;
+    height: 95%;
+    border-radius: 10px;
+}
+
+.video-container{
+    display: none;
+}
+
+.videophone{
+    display: none;
+}
+
+.floating-img-phone{
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.floating-img-phone2{
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+
+.info-button-desk {
+    position: absolute; /* Posición absoluta para ubicar el botón sobre la imagen */
+    bottom: 21%; /* Posiciona el botón cerca del borde inferior de la imagen */
+    left: 13%; /* Centra el botón horizontalmente */
+    transform: translateX(-50%); /* Alineación precisa del centro del botón */
+    background-color: #000; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 15px 20px; /* Padding del botón */
+    font-size: larger;
+    text-decoration: none; /* Elimina la subrayado del texto del enlace */
+    border: none; /* Si no quieres bordes en tu botón */
+    cursor: pointer; /* Cursor de mano al pasar el ratón por encima */
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+    border-radius: 100px;
+    font-family: "century",sans-serif;
+}
+
+.info-button-desk2 {
+    position: absolute; /* Posición absoluta para ubicar el botón sobre la imagen */
+    bottom: 29%; /* Posiciona el botón cerca del borde inferior de la imagen */
+    left: 66%; /* Centra el botón horizontalmente */
+    transform: translateX(-50%); /* Alineación precisa del centro del botón */
+    background-color: #FFF; /* Color de fondo del botón */
+    color: black; /* Color del texto del botón */
+    padding: 15px 20px; /* Padding del botón */
+    font-size: larger;
+    letter-spacing: 4px;
+    font-size: x-large;
+    width: 250px;
+    text-decoration: none; /* Elimina la subrayado del texto del enlace */
+    border: none; /* Si no quieres bordes en tu botón */
+    cursor: pointer; /* Cursor de mano al pasar el ratón por encima */
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+    border-radius: 100px;
+    font-family: "century",sans-serif;
+}
+
+.info-button-desk3{
+    position: absolute; /* Posición absoluta para ubicar el botón sobre la imagen */
+    bottom: 42%; /* Posiciona el botón cerca del borde inferior de la imagen */
+    left: 13.5%; /* Centra el botón horizontalmente */
+    transform: translateX(-50%); /* Alineación precisa del centro del botón */
+    background-color: #FFF; /* Color de fondo del botón */
+    color: black; /* Color del texto del botón */
+    padding: 15px 20px; /* Padding del botón */
+    font-size: larger;
+    letter-spacing: 4px;
+    font-size: large;
+    width: 175px;
+    text-decoration: none; /* Elimina la subrayado del texto del enlace */
+    border: none; /* Si no quieres bordes en tu botón */
+    cursor: pointer; /* Cursor de mano al pasar el ratón por encima */
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+    border-radius: 100px;
+    font-family: "century",sans-serif;
+}
+
+.info-button-desk4{
+    position: absolute; /* Posición absoluta para ubicar el botón sobre la imagen */
+    bottom: 24%; /* Posiciona el botón cerca del borde inferior de la imagen */
+    left: 17.5%; /* Centra el botón horizontalmente */
+    transform: translateX(-50%); /* Alineación precisa del centro del botón */
+    background-color: black; /* Color de fondo del botón */
+    color: #FFF; /* Color del texto del botón */
+    padding: 15px 20px; /* Padding del botón */
+    letter-spacing: 4px;
+    font-size: x-large;
+    width: 250px;
+    text-decoration: none; /* Elimina la subrayado del texto del enlace */
+    border: none; /* Si no quieres bordes en tu botón */
+    cursor: pointer; /* Cursor de mano al pasar el ratón por encima */
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+    border-radius: 100px;
+    font-family: "century",sans-serif;
+}
+
+
+
+
+.info-button-phone {
+    display: none;
+}
+
+.info-button-phone3{
+    display: none;
+}
+
+.info-button-phone4{
+    display: none;
+}
+
+.info-button-phone5{
+    display: none;
+}
+
+
+.info-button-desk:hover {
+    background-color: grey; /* Cambia el color de fondo al pasar el ratón por encima */
+}
+
+.info-button-desk2:hover{
+    background-color: #d0b456;
+}
+
+.info-button-desk3:hover{
+    background-color: #d0b456;
+}
+
+.info-button-desk4:hover{
+    background-color: grey;
+}
+
+
+.info-button-phone:hover {
+    background-color: #d0b456;
+}
+
+/*----------------------------------------------------------------------------------------------------------
+-------------------------------------------FOOTER -------------------------------------------------------
+------------------------------------------------------------------------------------------------------*/
+
+footer {
+    background-color: #191919; /* O cualquier color que esté usando para el footer */
+    color: white;
+    display: flex;
+    justify-content: center; /* Espacia las columnas uniformemente */
+    align-items: flex-start; /* Alinea el contenido de las columnas en la parte superior */
+    padding: 20px;
+    flex-wrap: wrap; /* Permite que las columnas se ajusten en pantallas más pequeñas */
+    text-align: center; /* Alinea el texto a la izquierda dentro de las columnas */
+    font-family: "century",sans-serif;
+}
+
+.footer-column {
+    flex: 1; /* Asigna la misma flexibilidad a todas las columnas */
+    min-width: 250px; /* Asegura que las columnas no se vuelvan demasiado pequeñas */
+    padding: 10px; /* Espacio dentro de cada columna */
+    box-sizing: border-box;
+}
+
+.footer-column p {
+    margin: 0 0 5px; /* Reduce el margen inferior para tener menos espacio entre las líneas */
+    line-height: 1.5; /* Ajusta la altura de línea para reducir el espacio entre líneas de texto */
+}
+
+.footer-logo {
+    width: auto;
+    height: 110px; /* O el tamaño que desees para el logo */
+    margin-bottom: 5px;
+    position: relative;
+    top: 50px;
+    left: 50px;
+}
+
+footer p:hover{
+    color: gold;
+}
+
+.newsletter-signup {
+    width: 50%;
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    background-color: #191919; /* O el color que prefieras */
+}
+
+.newsletter-signup h1{
+    font-size: x-large;
+    font-family: "century",sans-serif;
+    text-align: center;
+    justify-content: center;
+}
+
+#newsletterForm {
+    margin: auto;
+    margin-left: 10%;
+    display: inline-block;
+    right: 200px;
+}
+
+#newsletterForm input[type="text"],
+#newsletterForm input[type="email"] {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#newsletterForm button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: gold; /* O el color que prefieras */
+    color: black; /* O el color que prefieras */
+    cursor: pointer;
+}
+
+
+
+/*--------------------------------------------------------------------------------------------------------
+----------------------------------------FORMULARIO--------------------------------------------------------
+-------------------------------------------------------------------------------*/
+
+.contact-form-section {
+    background-color: #000; /* Fondo negro para la sección del formulario */
+    padding: 40px;
+    text-align: center;
+    max-width: 800px;
+    margin: 40px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 20px; /* Mantenemos los bordes redondeados */
+    overflow: hidden;
+    color: #d0b456; /* Ajustamos el color del texto a dorado */
+    font-family: "century",sans-serif;
+}
+
+.contact-form h2 {
+    color: #d0b456; /* Título dorado */
+    margin-bottom: 20px; /* Ajustamos el espaciado como en el diseño anterior */
+}
+
+.contact-form .form-group {
+    font-family: "century",sans-serif;
+    margin-bottom: 15px;
+    text-align: left; /* Aseguramos que el texto esté alineado a la izquierda */
+    font-family: "century",sans-serif;
+}
+
+.contact-form .form-group label {
+    display: block;
+    color: #d0b456; /* Etiquetas doradas */
+    margin-bottom: 5px;
+    font-size: larger;
+    font-family: "century",sans-serif;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+    width: 100%; /* Aseguramos que ocupen todo el ancho disponible */
+    padding: 10px;
+    background-color: #000; /* Fondo negro para los campos */
+    color: #fff; /* Texto en blanco para los campos */
+    border: 1px solid #d0b456; /* Borde dorado para los campos */
+    font-family: "century", sans-serif;
+    margin-bottom: 10px; /* Ajustamos el espaciado entre campos */
+}
+
+.submit-button {
+    background-color: #d0b456; /* Botón dorado */
+    color: #000; /* Texto negro para el botón */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    max-width: 10rem;
+    font-size: large;
+    border-radius: 120px;
+    font-family: "century",sans-serif;
+    transition: background-color 0.3s;
+}
+
+
+.form-group .submit-button{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit-button:hover {
+    background-color: #d4af37; /* Oscurecemos el dorado para el efecto hover */
+}
+
+/* --------------------------------------------------------------------------------------------------------
+-----------------------------------------TRATAMIENTOS-------------------------------------------------
+----------------------------------------------------------------------------------*/
+
+.treatments-section {
+    background-color: #000;
+    /*background-image: url("assets/services_background.png");*/
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 30px 0;
+    margin-bottom: -20px;
+    padding-bottom: 0; /* Elimina el padding inferior si es necesario */
+    font-family: "century",sans-serif;
+}
+
+.treatments-section .treatment-card {
+    /* Tus estilos para la tarjeta */
+    cursor: pointer; /* Cambia el cursor a pointer para indicar que es clickeable */
+}
+
+.treatments-asociation{
+    background-color: #000;
+    text-align: center;
+    background-position: center;
+    padding: 30px;
+    margin-bottom: -10px;
+    font-family: "century",sans-serif;  
+    margin-top: 35px;
+}
+
+.treatments-asociation a{
+    text-decoration: none;
+}
+
+.treatments-asociation h1{
+    letter-spacing: 3px;
+    font-family: "century",sans-serif;
+    font-size: x-large ;
+}
+
+#face-treatments h1{
+    margin-top: 50px;
+    margin-bottom: 30px;
+} 
+
+#more-treatments h1{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#body-treatments h1{
+    margin-top: 50px;
+    margin-bottom: 35px;
+}
+
+.treatments-asociation h1 .hover-underline-animation {
+    display: inline; /* Necesario para que el subrayado se ajuste al texto */
+    position: relative; /* Para posicionar el pseudo-elemento */
+    cursor: pointer; /* Cambia el cursor para indicar que es interactivo */
+    color: #FFF; /* Color del texto, cambia esto según tu preferencia */
+    z-index: 0;
+}
+
+  
+.treatments-asociation h1 .hover-underline-animation::after {
+    content: ''; /* Necesario para generar el pseudo-elemento */
+    display: block; /* Convertir en bloque para manejar anchura y posición */
+    width: 0; /* Ancho inicial del subrayado */
+    height: 2px; /* Altura del subrayado */
+    background: gold; /* Color del subrayado */
+    transition: width 0.3s ease-in-out; /* Transición suave al cambiar el ancho */
+    position: absolute; /* Posición absoluta respecto al texto */
+    bottom: -5px; /* Distancia del subrayado respecto al texto, ajustar si es necesario */
+    left: 0; /* Alineación izquierda del subrayado con el texto */
+}
+  
+.treatments-asociation h1 .hover-underline-animation:hover::after {
+    width: 100%; /* Ancho completo para que el subrayado se extienda a lo largo del texto */
+}
+
+.hover-underline-animation {
+    display: inline; /* Necesario para que el subrayado se ajuste al texto */
+    position: relative; /* Para posicionar el pseudo-elemento */
+    cursor: pointer; /* Cambia el cursor para indicar que es interactivo */
+    color: #FFF; /* Color del texto, cambia esto según tu preferencia */
+}
+
+.hover-underline-animation::after {
+    content: ''; /* Necesario para generar el pseudo-elemento */
+    display: block; /* Convertir en bloque para manejar anchura y posición */
+    width: 0; /* Ancho inicial del subrayado */
+    height: 2px; /* Altura del subrayado */
+    background: gold; /* Color del subrayado */
+    transition: width 0.3s ease-in-out; /* Transición suave al cambiar el ancho */
+    position: absolute; /* Posición absoluta respecto al texto */
+    bottom: -5px; /* Distancia del subrayado respecto al texto, ajustar si es necesario */
+    left: 0; /* Alineación izquierda del subrayado con el texto */
+}
+
+.hover-underline-animation:hover::after {
+    width: 100%; /* Ancho completo para que el subrayado se extienda a lo largo del texto */
+}
+
+
+
+.treatment-titles{
+    margin-top: 28px;
+}
+
+
+.treatment-titles img{
+    max-width: 26%;
+    max-height: 340px;
+    margin-top: -20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.treatment-title img:hover{
+    transform: scale(1.10);
+}
+
+.treatment-titles img:hover{
+    transform: scale(1.10);
+}
+
+.treatments-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual ancho */
+    row-gap: 30px;
+    column-gap: 5px;
+    max-width: 1180px; /* Máximo ancho del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+}
+
+.treatment-card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos hijos horizontalmente */
+    text-align: center;
+    height: 100%;
+    background: #0e0e0e; /* Fondo de la tarjeta */
+    padding: 0; /* Espacio alrededor del contenido de la tarjeta */
+    border: 2.5px solid #ccc; /* Borde de la tarjeta */
+    border-radius: 5px;
+    margin: 0 11px; /* Ajusta los márgenes horizontalmente */
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1); /* Estado normal de la tarjeta */
+    cursor: pointer;
+    
+}
+
+.treatment-card.expanded {
+    display: flex; /* Usa flexbox */
+    flex-direction: row; /* Elementos en fila */
+    position: fixed;
+    top: 5%; /* Centrado verticalmente */
+    left: 7%; /* Centrado horizontalmente */
+    width: 80%; /* Ancho de la tarjeta expandida */
+    height: auto; /* Altura automática para contener todo el contenido */
+    overflow-y: auto; /* Permite desplazarse si el contenido es largo */
+    padding: 20px; /* Espaciado interior */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra para resaltar */
+    border-radius: 6px;
+    transition: transform 0.4s  ease-in-out;
+    transform: scale(1);
+    opacity: 1;
+    z-index: 2; 
+}
+
+.treatment-image {
+    max-width: 50%; /* Ajusta la imagen para que ocupe el 100% del ancho de la tarjeta */
+    height: auto;
+    margin: 20px 0; /* Añade un margen superior e inferior a la imagen */
+}
+
+.treatment-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-family: "century", sans-serif;
+    padding-bottom: 20px;
+}
+
+.treatment-description, #treatmentPrice {
+    font-size: 1.050em;
+    color: azure;
+    font-family: "century", sans-serif;
+    padding: 0 10px; /* Añade padding horizontal */
+    margin-bottom: 1em;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+#btnVolverArriba {
+    position: fixed; /* Posición fija en la pantalla */
+    bottom: 20px; /* 20px desde el fondo */
+    right: 30px; /* 30px desde la derecha */
+    z-index: 99; /* Asegura que esté sobre otros elementos */
+    border: none; /* Sin borde */
+    outline: none; /* Sin contorno */
+    background-color: #d0b456; /* Color de fondo */
+    color: black; /* Color de texto */
+    cursor: pointer; /* Cursor de mano */
+    padding: 15px; /* Relleno */
+    font-size: large;
+    padding-left: 21px;
+    padding-right: 21px;
+    border-radius: 100%; /* Bordes redondeados */
+    text-shadow: 1px 0 0 currentColor, -1px 0 0 currentColor, 0 1px 0 currentColor, 0 -1px 0 currentColor;
+}
+
+/* Puedes añadir estilos adicionales para el hover si lo deseas */
+#btnVolverArriba:hover {
+    background-color: #d0b421; /* Oscurece el botón un poco */
+}
+
+.social-buttons {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000; /* Asegura que los botones estén sobre otros elementos */
+    transition: opacity 0.5s ease;
+}
+
+.social-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Ajusta según necesites */
+    height: 50px; /* Ajusta según necesites */
+    color: white;
+    padding: 10px;
+    border-radius: 50%; /* Hace que los botones sean redondos */
+    text-decoration: none;
+}
+
+.instagram-btn {
+    background-color: #E1306C; /* Color de Instagram */
+}
+
+.facebook-btn {
+    background-color: #3B5998; /* Color de Facebook */
+}
+
+.social-buttons i {
+    font-size: 20px; /* Ajusta el tamaño del ícono */
+}
+
+
+  
+
+.treatment-details{
+    display: hidden;
+    padding: 10px;
+    margin-top: -30px;
+}
+
+.treatment-content{
+    margin: -20px;
+    padding: 5px;
+}
+
+.treatment-card.expanded .treatment-details,
+    .treatment-card.expanded .treatment-content {
+        width: 50%; /* Que los detalles ocupen todo el ancho disponible */
+        padding: 7px; /* Ajustar el padding si es necesario */
+    }
+
+
+.treatment-appointment{
+    position: relative; /* Posición absoluta para ubicar el botón sobre la imagen */
+    bottom: -15px; /* Posiciona el botón cerca del borde inferior de la imagen */ /* Centra el botón horizontalmente */
+    transform: translateX(-50%); /* Alineación precisa del centro del botón */
+    background-color: black; /* Color de fondo del botón */
+    color: azure; /* Color del texto del botón */
+    padding: 17px; /* Padding del botón */
+    font-size: medium;
+    text-decoration: none; /* Elimina la subrayado del texto del enlace */
+    border: solid 1px SILVER; /* Si no quieres bordes en tu botón */
+    cursor: pointer; /* Cursor de mano al pasar el ratón por encima */
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+    border-radius: 5px;
+    font-family: "century",sans-serif;
+    margin-top: 30px;
+    width: 200px;
+}
+
+.treatment-faqs{
+    position: relative; /* Posición absoluta para ubicar el botón sobre la imagen */
+    bottom: -15px; /* Posiciona el botón cerca del borde inferior de la imagen */ /* Centra el botón horizontalmente */
+    transform: translateX(-50%); /* Alineación precisa del centro del botón */
+    background-color: black; /* Color de fondo del botón */
+    color: azure; /* Color del texto del botón */
+    padding: 17px; /* Padding del botón */
+    font-size: medium;
+    border: solid 1px silver;
+    text-decoration:none; /* Elimina la subrayado del texto del enlace */
+    cursor: pointer; /* Cursor de mano al pasar el ratón por encima */
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+    border-radius: 5px;
+    font-family: "century",sans-serif;
+    margin-top: 30px;
+    width: 200px;
+    
+}
+
+.treatment-expanded-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual ancho */
+    gap: 40px; /* Espacio entre las columnas */
+    max-width: 250px; /* Máximo ancho del contenedor */
+    margin: 1em auto; /* Centrar el contenedor */
+    margin-top: -30px;
+    margin-bottom: 30px;
+}
+
+.treatment-card.expanded .treatment-details{
+    width: 90%; /* Ajusta esto según necesites */
+    display: flex;
+    flex-direction: column; /* Contenido en columna dentro del lado derecho */
+    justify-content: center; /* Centrado verticalmente */
+    padding-left: 20px; /* Espaciado a la izquierda */
+}
+
+.treatment-card.expanded .treatment-content {
+    width: 60%; /* Ajusta esto según necesites */
+    display: flex;
+    flex-direction: column; /* Contenido en columna dentro del lado derecho */
+    justify-content: center; /* Centrado verticalmente */
+    padding-left: 20px; /* Espaciado a la izquierda */
+}
+
+.treatment-card.expanded .treatment-image{
+    max-width: 30%;
+    display: block;
+    padding-left: 4rem;
+}
+
+.treatment-card:hover {
+    box-shadow: 0 0 14px #d0b456
+}
+
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #bed01f;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 24px;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    display: none; /* Oculto por defecto, se mostrará en la tarjeta expandida */
+}
+  
+.treatment-card.expanded .close-btn {
+    display: block; /* Muestra el botón cuando la tarjeta está expandida */
+  }
+
+
+.treatment-appointment:hover, .treatment-faqs:hover{
+    background-color: #d0b456;
+    border-radius: 20px;
+    color: black;
+    
+}
+/*----------------------------------------------------------------------------------------------------------
+-------------------------------------------ABOUT US---------------------------------------------------------
+------------------------------------------------------------------------------------------------------------*/
+
+.about-us-section .container {
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 20px;
+    font-size: large;
+    font-family: "century",sans-serif; /* Cambia la fuente a Century Gothic o Century como alternativa */
+}
+
+.section-content {
+    margin: 40px 0; /* Añade espacio antes y después de cada sección */
+    text-align: left; /* Alinea el texto hacia la izquierda */
+    padding-left: 10%; /* Añade padding a la izquierda para no pegar el texto al borde */
+}
+
+.section-title {
+    font-size: 1.75em; /* Tamaño de fuente un poco menor para los títulos */
+    margin-bottom: 15px; /* Añade espacio debajo del título */
+    color: #d0b456; /* Utiliza un dorado sólido para mayor legibilidad */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    font-weight: bold; /* Hace el texto más grueso */
+    position: relative; /* Establece la posición relativa para el pseudo-elemento */
+    cursor: pointer; /* Cambia el cursor a pointer para indicar interactividad */
+}
+
+.section-title::after {
+    content: ''; /* Necesario para que el pseudo-elemento se muestre */
+    position: absolute; /* Posicionamiento absoluto respecto al título */
+    left: 0; /* Alinea el pseudo-elemento a la izquierda del título */
+    bottom: -5px; /* Posiciona el pseudo-elemento justo debajo del título */
+    height: 2px; /* Altura de la barra dorada */
+    width: 0; /* Ancho inicial de la barra dorada */
+    background-color: #d0b456; /* Color de la barra dorada */
+    transition: width 0.3s ease-in-out; /* Transición suave del ancho de la barra */
+}
+
+.section-title:hover::after {
+    width: 75%; /* Expande la barra dorada al 100% del ancho del título al pasar el mouse */
+}
+
+.section-description,
+.section-description ul {
+    font-size: 1em; /* Mantiene el tamaño de fuente */
+    color: #FFF; /* Cambia el color del texto a blanco */
+    font-family: "Century Gothic", Century, sans-serif; /* Asegura que la descripción use la fuente Century */
+    line-height: 1.6; /* Aumenta la altura de línea para mejorar la legibilidad */
+}
+
+.contact-section {
+    text-align: center; /* Centra el contenido */
+    padding: 20px; /* Añade padding alrededor de la sección */
+    margin-top: 40px; /* Añade espacio antes de la sección de contacto */
+}
+
+.contact-section .social-links {
+    display: flex; /* Cambia a flex para un mejor control */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 20px; /* Añade espacio entre los iconos */
+}
+
+.contact-section .social-links img {
+    width: 70px; /* Establece un tamaño fijo para los iconos */
+}
+
+
+
+/*-----------------------------------------------------------------------------------------------------
+---------------------------------------FAQS--------------------------------------------------------
+------------------------------------------------------------------------------------------------*/
+
+.faq-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+.faq-item {
+    margin-bottom: 10px; /* Espacio entre cada conjunto de pregunta/respuesta */
+}
+.faq-question {
+    cursor: pointer;
+    padding: 10px;
+    background-color:black;
+    border: 2px solid goldenrod;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: background-color 0.2s ease;
+    font-family: "century",sans-serif;
+    color: white;
+}
+.faq-question:hover {
+    background-color: goldenrod;
+}
+.faq-answer {
+    padding: 15px;
+    background-color: black;
+    margin-top: 5px;
+    border-left: 2px solid goldenrod;
+    border-right: 2px solid goldenrod;
+    border-bottom: 2px solid goldenrod;
+    
+    display: none; /* Oculta las respuestas por defecto */
+    overflow: hidden;
+    font-size: 16px;
+    color: white;
+}
+
+.faq-container h2, .faq-container button {
+    font-family: "Century", sans-serif;
+}
+
+/* Para las respuestas */
+.faq-container p {
+    font-family: "Century", sans-serif;
+}
+
+
+/*--------------------------------------------------------------------------------------------------------
+--------------------------------------------MEDIA QUERYS---------------------------------------------
+-----------------------------------------------------------------------------------------------*/
+
+
+@media (max-width: 768px) {
+
+    nav{
+        z-index: 100000;
+    }
+
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: black;
+        overflow:hidden;
+        transition: max-height 0.3s ease;
+        max-height: 0;
+    }
+
+    nav ul.active {
+        max-height: 250px; /* Ajusta esta altura según tu contenido */
+        z-index: 100000;
+    }
+
+    nav ul {
+        width: 100%; /* Asegura que la lista ocupe todo el ancho */
+        text-align: center; /* Centra el texto de los enlaces */
+    }
+
+    nav ul li {
+        display: block; /* Los elementos li deben ser bloques para ocupar su propio renglón */
+        width: 100%; /* Cada li ocupa todo el ancho de la lista */
+        margin: 0; /* Elimina márgenes por defecto */
+        padding: 10px 0; /* Agrega padding para espacio arriba y abajo, ajusta según necesidad */
+    }
+
+    nav ul li a {
+        width: 100%; /* Asegura que los enlaces ocupen todo el ancho del li */
+        display: block; /* Hace que los enlaces también sean bloques para recibir padding y margin */
+    }
+
+    nav ul li::after {
+        display: none; /* Esconde las barras verticales */
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .branding img {
+        max-width: 100%; /* Asegúrate de que la imagen sea responsive y se ajuste al contenedor */
+        height: 4.5rem; /* Mantiene la proporción de la imagen */
+    }
+
+    .homeTreatments .img1 {
+        width: 90%; /* o el ancho que prefieras */
+        height: auto;
+        margin: auto; /* Esto añade espacio arriba y abajo de cada imagen y las centra horizontalmente */
+        display: none;
+    }
+
+    .homeTreatments .img2 {
+        width: 80%; /* o el ancho que prefieras */
+        height: auto;
+        margin: auto; /* Esto añade espacio arriba y abajo de cada imagen y las centra horizontalmente */
+        display: none;
+    }
+
+    .homeTreatments .home_treatments-phone{
+        width: 85%; /* o el ancho que prefieras */
+        height: auto;
+        margin: auto;
+        display: block; /* Esto hará que cada imagen tome su propia línea */
+    }
+
+    .floating-img-phone{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .floating-img-desk{
+        display: none;
+    }
+
+    .floating-img-desk2{
+        display: none;
+    }
+    
+    .info-button-phone{
+        display: block;
+        position: relative; /* Posición absoluta para ubicar el botón sobre la imagen */
+        transform: translateX(-50%); /* Alineación precisa del centro del botón */
+        background-color: black; /* Color de fondo del botón */
+        color: #FFF; /* Color del texto del botón */
+        padding: 15px 20px; /* Padding del botón */
+        bottom: 115px; /* Posiciona el botón cerca del borde inferior de la imagen */
+        left: 70%; /* Centra el botón horizontalmente */
+        transform: translateX(-50%); /* Alineación precisa del centro del botón */
+        background-color: black; /* Color de fondo del botón */
+        color: #FFF; /* Color del texto del botón */
+        padding: 15px 20px; /* Padding del botón */
+        letter-spacing: 4px;
+        font-size: large;
+        width: 160px;
+        text-decoration: none; /* Elimina la subrayado del texto del enlace */
+        border: none; /* Si no quieres bordes en tu botón */
+        cursor: pointer; /* Cursor de mano al pasar el ratón por encima */
+        transition: background-color 0.3s ease; /* Transición suave para el hover */
+        border-radius: 100px;
+        font-family: "century",sans-serif;
+    }
+
+    .info-button-desk{
+        display: none;
+    }
+
+    .info-button{
+        display: none;
+    }
+
+
+    .appointment-link{
+        margin-bottom: -4px;
+    }
+
+    .appointment-link img {
+        width: 80%; /* Mantén el tamaño original de la imagen o ajusta según sea necesario */
+        height: auto;
+        transition: transform 0.3s ease; /* Opcional: animación para cuando se pase el ratón por encima */
+    }
+
+    .video{
+        display: none;
+    }
+
+    .video2{
+        display: none;
+    }
+
+    .video-container{
+        display: block;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        opacity: 0; /* Comienza con las imágenes ocultas */
+        transition: opacity 1.5s ease-in-out; /* Transición suave para el efecto de aparición */
+    }
+
+    .video-container.visible {
+        opacity: 1; /* Hace que las imágenes sean visibles */
+    }
+
+    .videophone{
+        top: 20px;
+        display: block;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .videophone.visible {
+        opacity: 1; /* Las imágenes serán completamente visibles cuando tengan esta clase */
+    }
+
+    .floating-img-phone2{
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-top: 5%;
+        justify-content: center;
+        margin-left: 7px;
+    }
+
+    
+    /* Asegúrate de que no haya estilos de barra vertical */
+    nav ul li:not(:last-child)::after {
+        content: "";
+        padding: 0;
+        color: transparent;
+        display: none; /* Opcional, por si el content: ""; no funciona */
+    }
+
+    
+        .footer{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            font-family: "century", sans-serif;
+            padding: 10px;
+            justify-content: space-around;
+        }
+
+        .footer-column {
+            margin-bottom: 10px;
+            text-align: center;
+        }    
+
+        .footer-column:last-child {
+            margin-bottom: 0;
+        }
+        
+        .newsletter-signup {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%; /* Adjust as needed */
+            margin: 0 auto; /* Center the form */
+        }
+
+        #newsletterForm {
+            width: 90%; /* Adjust as needed */
+            margin: 0 auto; /* Center the form */
+        }
+
+
+
+    .footer-logo {
+        max-width: 105%; /* O cualquier porcentaje que se ajuste mejor a tu diseño */
+        max-height: 80px; /* Asegúrate de que la altura se ajuste proporcionalmente */
+        margin-bottom: 40px; /* Ajusta el margen como sea necesario */
+        margin-right: 27%;
+    }
+
+    
+
+
+    .info-button {
+        bottom: 19%; /* Posiciona el botón cerca del borde inferior de la imagen */
+        left: 13%; /* Centra el botón horizontalmente */
+        padding: 5px 10px; /* Reduce el padding para disminuir el tamaño del botón */
+        font-size: 0.8em; /* Disminuye el tamaño del texto si es necesario */
+        font-family: "century",sans-serif;
+        /* Ajusta cualquier otro estilo que quieras cambiar para dispositivos móviles */
+    }
+
+    .contact-form {
+        margin-bottom: -40px;
+    }
+
+    body.nav-active nav ul {
+        z-index: 100; /* Asegúrate de que el menú esté por encima de otros elementos */
+    }
+    
+    body.nav-active .about-us-section .container {
+        z-index: 1; /* Asegúrate de que el contenedor esté debajo del menú desplegable */
+    }
+
+    .nav-toggle {
+        z-index: 101; /* Más alto que el menú desplegable para mantenerlo accesible */
+    }
+
+    
+    #floating-images {
+        width: 100%; /* Ocupa el ancho completo de la sección */
+        text-align: center; /* Centra las imágenes horizontalmente */
+        padding: 50px 0; /* Agrega algo de espacio arriba y abajo de las imágenes */
+        margin-bottom: -2rem; 
+    }
+    
+    .treatments-container {
+        display: grid;
+        grid-template-columns: 1fr; /* Solo una columna */
+        gap: 20px;
+        padding: 0 10px; /* Añade algo de padding a los lados si es necesario */
+    }
+
+    .treatments-section img {
+        max-width: 90%; /* o el porcentaje que desees */
+        height: auto;
+        display: block;
+        margin: 10px auto 20px; /* Ajusta el margen como sea necesario */
+    }
+
+    .treatments-asociation h1{
+        font-size: x-large ;
+    }
+
+
+    .treatment-titles img{
+        max-width: 50%;
+        height: auto;
+        margin-top: -10px;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .treatment-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centra los elementos hijos horizontalmente */
+        text-align: center;
+        height: 100%;
+        background: #0e0e0e; /* Fondo de la tarjeta */
+        padding: 0; /* Espacio alrededor del contenido de la tarjeta */
+        border: 2.5px solid #ccc; /* Borde de la tarjeta */
+        border-radius: 20px;
+        margin: 0 11px; /* Ajusta los márgenes horizontalmente */
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        opacity: 1; /* Inicia con opacidad 0 para no mostrar la tarjeta inicialmente */
+        transform: scale(0.95);
+    }
+
+    .treatment-card img{
+        max-width: 60%;
+        padding-top: 10px;
+    }
+    
+    .treatment-card.expanded {
+        flex-direction: column;
+        align-items: center; /* Centrar los elementos de la tarjeta */
+        width: 80%; /* Ocupar el ancho completo de la pantalla */
+        height: 90%; /* Altura automática para contener todo el contenido */
+        top: 10px; /* Ajustar la posición superior */
+        left: 21px; /* Ajustar la posición izquierda */
+        margin: 0; /* Eliminar cualquier margen que se haya establecido */
+        transform: scale(1); /* Ajustar a la escala normal */
+        box-shadow: none; /* Opcional: quitar la sombra si no se necesita */
+        overflow-y: auto; /* Permitir desplazamiento vertical si es necesario */
+        padding: 1em; /* Añadir algo de espacio dentro de la tarjeta */
+        z-index: 1000;
+    }
+
+    .treatment-expanded-buttons {
+        display: flex;
+        max-width: 200px; /* Máximo ancho del contenedor */
+        margin: 1em auto; /* Centrar el contenedor */
+    }
+
+    .treatment-faqs{
+        display: block; /* Posición absoluta para ubicar el botón sobre la imagen */
+        bottom: -15px; /* Posiciona el botón cerca del borde inferior de la imagen */ /* Centra el botón horizontalmente */
+        transform: translateX(-50%); /* Alineación precisa del centro del botón */
+        background-color: black; /* Color de fondo del botón */
+        color: white; /* Color del texto del botón */
+        font-size: 0.85rem;
+        text-decoration: none; /* Elimina la subrayado del texto del enlace */
+        border: solid 2px silver; /* Si no quieres bordes en tu botón */
+        cursor: pointer; /* Cursor de mano al pasar el ratón por encima */
+        transition: background-color 0.3s ease; /* Transición suave para el hover */
+        border-radius: 6px;
+        font-family: "century",sans-serif;
+        margin-left: -1.5rem;
+        margin-top: -5px;
+        margin-bottom: 20px;
+        padding:15px;
+    }
+    
+    .hover-underline-animation h1{
+        display: inline; /* Necesario para que el subrayado se ajuste al texto */
+        position: relative; /* Para posicionar el pseudo-elemento */
+        cursor: pointer; /* Cambia el cursor para indicar que es interactivo */
+        color: #FFF; /* Color del texto, cambia esto según tu preferencia */
+    }
+
+
+    .treatment-appointment{
+        display: block; /* Posición absoluta para ubicar el botón sobre la imagen */
+        bottom: -15px; /* Posiciona el botón cerca del borde inferior de la imagen */ /* Centra el botón horizontalmente */
+        transform: translateX(-50%); /* Alineación precisa del centro del botón */
+        background-color: black; /* Color de fondo del botón */
+        color: white; /* Color del texto del botón */
+        font-size: 0.85rem;
+        text-decoration: none; /* Elimina la subrayado del texto del enlace */
+        border: solid 2px silver; /* Si no quieres bordes en tu botón */
+        cursor: pointer; /* Cursor de mano al pasar el ratón por encima */
+        transition: background-color 0.3s ease; /* Transición suave para el hover */
+        border-radius: 6px;
+        font-family: "century",sans-serif;
+        margin-top: -5px;
+        width: 111px;
+        margin-left: 13.3%;
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+
+    .treatment-title{
+        display: flex;
+        width: 90%;
+        padding-left: 4.5%;
+    }
+
+    /* 2 y 20 */
+
+    .treatment-appointment:hover, .treatment-faqs:hover{
+        background-color: #d0b456;
+        border-radius: 20px;
+        color: black;
+        
+    }
+
+
+    .treatment-card.expanded.visible {
+        opacity: 1; /* Opacidad final para la animación */
+        transform: scale(1) rotateY(0deg); /* Escala final para la animación */
+      }
+
+    #overlay {
+        /* Estilos para el overlay... */
+        display: none; /* Aseguramos que esté oculto por defecto */
+        z-index: 999;
+      }
+      
+    #overlay.visible {
+        display: block; /* Aseguramos que el overlay sea visible cuando tiene la clase .visible */
+    }
+    
+    .treatment-card.expanded .treatment-image {
+        max-width: 60%; /* Ajustar la imagen para pantallas pequeñas */
+        padding: 0;
+        
+    }
+    
+    .treatment-card.expanded .treatment-details,
+    .treatment-card.expanded .treatment-content {
+        width: 100%; /* Que los detalles ocupen todo el ancho disponible */
+        padding: 0; /* Ajustar el padding si es necesario */
+    }
+    
+    .treatment-card.expanded .close-btn {
+        /* Ajustar la posición del botón cerrar si es necesario */
+        top: 0.5em;
+        right: 0.5em;
+    }
+
+    .info-button-desk2{
+        display: none;
+    }
+
+    .info-button-desk3{
+        display: none;
+    }
+
+    .info-button-desk4{
+        display: none;
+    }
+
+    .info-button-phone3{
+        display: block;
+        position: relative; /* Posición absoluta para ubicar el botón sobre la imagen */
+        transform: translateX(-50%); /* Alineación precisa del centro del botón */
+        background-color: black; /* Color de fondo del botón */
+        left: 200px;
+        bottom: 50px;
+        color: #FFF; /* Color del texto del botón */
+        padding: 15px 20px; /* Padding del botón */
+        transform: translateX(-50%); /* Alineación precisa del centro del botón */
+        background-color: white; /* Color de fondo del botón */
+        color: black    ; /* Color del texto del botón */
+        padding: 15px 20px; /* Padding del botón */
+        letter-spacing: 4px;
+        font-size: large;
+        width: 200px;;
+        text-decoration: none; /* Elimina la subrayado del texto del enlace */
+        border: none; /* Si no quieres bordes en tu botón */
+        cursor: pointer; /* Cursor de mano al pasar el ratón por encima */
+        transition: background-color 0.3s ease; /* Transición suave para el hover */
+        border-radius: 100px;
+        font-family: "century",sans-serif;
+    }
+    
+    .info-button-phone4{
+        display: block;
+        position: relative; /* Posición absoluta para ubicar el botón sobre la imagen */
+        transform: translateX(-50%); /* Alineación precisa del centro del botón */
+        background-color: black; /* Color de fondo del botón */
+        left: 200px;
+        bottom: 210px;
+        padding: 15px 20px; /* Padding del botón */
+        transform: translateX(-50%); /* Alineación precisa del centro del botón */
+        background-color: black; /* Color de fondo del botón */
+        color: white; /* Color del texto del botón */
+        padding: 15px 20px; /* Padding del botón */
+        letter-spacing: 4px;
+        font-size: large;
+        width: 180px;
+        text-decoration: none; /* Elimina la subrayado del texto del enlace */
+        border: none; /* Si no quieres bordes en tu botón */
+        cursor: pointer; /* Cursor de mano al pasar el ratón por encima */
+        transition: background-color 0.3s ease; /* Transición suave para el hover */
+        border-radius: 100px;
+        font-family: "century",sans-serif;
+        margin-bottom: -50px;
+    }
+
+    .info-button-phone5{
+        display: block;
+        position: relative; /* Posición absoluta para ubicar el botón sobre la imagen */
+        transform: translateX(-50%); /* Alineación precisa del centro del botón */
+        background-color: black; /* Color de fondo del botón */
+        left: 280px;
+        bottom: 180px;
+        padding: 15px 20px; /* Padding del botón */
+        transform: translateX(-50%); /* Alineación precisa del centro del botón */
+        background-color: black; /* Color de fondo del botón */
+        color: white; /* Color del texto del botón */
+        padding: 15px 20px; /* Padding del botón */
+        letter-spacing: 4px;
+        font-size: large;
+        width: 160px;
+        text-decoration: none; /* Elimina la subrayado del texto del enlace */
+        border: none; /* Si no quieres bordes en tu botón */
+        cursor: pointer; /* Cursor de mano al pasar el ratón por encima */
+        transition: background-color 0.3s ease; /* Transición suave para el hover */
+        border-radius: 100px;
+        font-family: "century",sans-serif;
+        margin-bottom: -50px;
+    }
+
+    .info-button-phone3:hover{
+        background-color: #d0b456;
+    }
+    
+    .info-button-phone4:hover{
+        background-color: grey;
+    }
+    
+    
+    .info-button-phone5:hover {
+        background-color: #d0b456;
+    }
+
+}

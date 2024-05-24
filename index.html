@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/loguito_web.png">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Century:estilos" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="branding">
+         <img src="assets/inheader_web.png" alt="Bellus Medical Arts Aesthetics & Wellness">
+        </div>
+
+        <nav>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="treatments.html">TREATMENTS</a></li>
+                <li><a href="appointments.html">APPOINTMENTS</a></li>
+                <li><a href="aboutUs.html">ABOUT US</a></li>
+                <li><a href="faqs.html">FAQs</a></li> <!-- Nuevo enlace añadido -->
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="social-buttons">
+            <a href="https://www.instagram.com/drbeauvoirdallas" class="instagram-btn" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/drbeauvoirclinics" class="facebook-btn" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+        
+        <section>
+            <div class="homeTreatments">
+                <img src="assets/home_treatments.png" alt="First Treatment" class="img1">
+                <img src="assets/home_fycb.png" alt="Second Treatment" class="img2">
+                <img src="assets/home_treatments-mobile.png" alt="mobile view" class="home_treatments-phone">
+            </div>
+            <div class="homeTreatments">
+                <a href="appointments.html" class="appointment-link">
+                    <img src="assets/schedule-an-appointment_button.png" alt="Schedule an Appointment">
+                </a>
+            </div>
+        </section>
+
+        <section id="floating-images">
+            <div class="floating-img-container">
+                <img src="assets/hairtrans_home.png" alt="Hair Transplantation" class="floating-img-desk">
+                <a href="treatments.html#hair-trans" class="info-button-desk">MORE INFO</a>
+                <img src="assets/home_hairtrans-mobile.png" alt="haitrans-mobile-view" class="floating-img-phone">
+                <a href="treatments.html#hair-trans" class="info-button-phone">MORE INFO</a>
+            </div>
+    
+
+            <div class="floating-img-container">
+                <img src="assets/home-drbeauvoir.png" alt="our professional" class="floating-img-desk">
+                <img src="assets/home-drbeauvoir-mobile.png" alt="midcal" class="floating-img-phone">
+            </div>
+
+            
+
+            <div class="floating-img-container2">
+                <video src="assets/video1 home.mp4" class="video" autoplay loop muted></video>
+                <img src="assets/home_bbl.png" class="floating-img-desk2">
+                <a href="treatments.html#bbl_icon" class="info-button-desk2">MORE INFO</a>
+            </div>  
+
+            <div class="video-container">
+                <video src="assets/video1 home.mp4" class="videophone" autoplay loop muted></video>
+                <img src="assets/home_bbl-mobile.png" class="floating-img-phone2">
+                <a href="assets/home_bbl-mobile.png" class="info-button-phone3">MORE INFO</a>
+                <video src="assets/video2 home.mp4" class="videophone" autoplay loop muted></video>
+                <img src="assets/home_bbl2-mobile.png" class="floating-img-phone2">
+                <a href="treatments.html#bbl_icon" class="info-button-phone3">CLICK HERE</a>
+            </div>
+
+
+            <div class="floating-img-container3">
+                <img src="assets/home_bbl2.png" class="floating-img-desk2" alt="home_bbl2">
+                <video src="assets/video2 home.mp4" class="video2" autoplay loop muted ></video>
+                <a href="treatments.html#bbl_icon" class="info-button-desk3">CLICK HERE</a>
+            </div>
+
+            <div class="floating-img-container">
+                <img src="assets/home_lips.png" alt="lips treatment" class="floating-img-desk">
+                <img src="assets/home_lips-mobile.png" alt="lips treatment" class="floating-img-phone2">
+                <a href="treatments.html#lips_icon" class="info-button-desk4">MORE INFO</a>
+                <a href="treatments.html#lips_icon" class="info-button-phone5">MORE INFO</a>
+            </div>
+
+            <div class="floating-img-container">
+                <img src="assets/home_weightloss.png" alt="home_weightloss" class="floating-img-desk">
+                <img src="assets/home_weightloss-mobile.png" alt="home_weightloss" class="floating-img-phone2">
+                <a href="treatments.html#weightloss_icon" class="info-button-desk4">MORE INFO</a>
+                <a href="treatments.html#weightloss_icon" class="info-button-phone4">MORE INFO</a>
+            </div>
+    
+            <!-- Puedes añadir más imágenes aquí si quieres -->
+        </section>
+    </main>
+
+    <script src="footerbut.js"></script>
+    
+
+    <footer>
+        
+        <img src="assets/footer_logo.png" alt="Bellus Logo" class="footer-logo">
+        
+        
+        <div class="newsletter-signup">
+            <h1>SIGN UP TO OUR NEWSLETTER</h1>
+            <form id="newsletterForm"  method="POST">
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <input type="email" id="email" name="email" placeholder="E-Mail" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>        
+        
+        <div class="footer-column">
+            <p>Bellus Medical Arts|Aesthetic and Wellness</p>
+            <p>Marie Beauvoir, MD</p>
+            <p>Board Certified, Family Medicine</p>
+            <p>Medical Director - Owner</p>
+        </div>
+        <div class="footer-column">
+            <p>1241 Prosper Commons Blvd, Suite 108</p>
+            <p>Prosper, TX 75078</p>
+            <p>&copy; 2024, BellusMedicalArts</p>
+            <p>Powered by Luca Sicoli and Alexis Flores.</p>
+        </div>       
+
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navUl = document.querySelector('nav ul');
+
+            navToggle.addEventListener('click', function () {
+                navUl.classList.toggle('active');
+                this.classList.toggle('active');
+            });
+        });
+    </script>
+
+    <script src="floatingImages.js"></script>
+    <script src="footerform.js"></script>
+
+    
+</body>
+</html>
