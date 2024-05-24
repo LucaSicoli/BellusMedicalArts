@@ -1,0 +1,1 @@
+Bellus Medical Arts is a premier medical aesthetics company focused on advancing the field of aesthetic medicine. They are dedicated to enhancing patient care by offering innovative and effective non-invasive treatments.
